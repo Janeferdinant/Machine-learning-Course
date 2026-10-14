@@ -13,8 +13,8 @@ This repository was created on GitHub on 2020-08-23 from the GitHub Learning Lab
 | `plot_kmeans_silhouette_analysis.ipynb` | scikit-learn example "Selecting the number of clusters with silhouette analysis on KMeans clustering" | https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html | BSD-3-Clause (text below) |
 | `california_regression.ipynb`, `tip_amount_tensorflow.ipynb` | Google Machine Learning Crash Course programming exercise "Linear regression with a real dataset" (`build_model`, `train_model`, `plot_the_model` and their docstrings), extended by the owner | https://developers.google.com/machine-learning/crash-course | Apache-2.0 (text below). Google states this license on the exercise notebooks; to be re-checked against the current course pages |
 | `titanic-tutorial.ipynb` | Kaggle notebook boilerplate and a feature-engineering workflow that resembles the public Kaggle notebook "Titanic Data Science Solutions" | https://www.kaggle.com/competitions/titanic | **to be confirmed.** Kaggle competition rules and the notebook author's license apply |
-| `diabetes.ipynb` | A common decision-tree tutorial pattern (column names and `pydotplus` export) | not identified | **to be confirmed** |
-| `SigmoidNeuron.ipynb` | A deep-learning course notebook structure (sigmoid neuron class and toy-data fit) | not identified | **to be confirmed** |
+| `diabetes.ipynb` | A common decision-tree tutorial pattern (column names and `pydotplus` export) | not identified | not recorded |
+| `SigmoidNeuron.ipynb` | A deep-learning course notebook structure (sigmoid neuron class and toy-data fit) | not identified | not recorded |
 
 ## Datasets
 
@@ -25,11 +25,11 @@ None of these files is stored in this repository. The notebooks that were re-run
 | Banknote Authentication, Lohweg, V. (2012), UCI Machine Learning Repository, https://doi.org/10.24432/C55P57 | `banknote_randomforest`, `ANN_using_tensorflow`, `ANN_using_pytorch` | https://archive.ics.uci.edu/dataset/267/banknote+authentication | CC BY 4.0 (stated on the UCI page, read 2026-10-13) |
 | California housing training set (from the 1990 US census), as distributed with Google's ML Crash Course | `california_regression` | https://download.mlcc.google.com/mledu-datasets/california_housing_train.csv | Distributed by Google with the course; terms per the course page. Original data: Pace and Barry (1997), Sparse spatial autoregressions |
 | MNIST handwritten digits, LeCun, Cortes and Burges | `mnist_opencv`, `CNN_Identify_the_Digits_(MNIST)` | Downloaded by `keras.datasets.mnist` | Per the MNIST authors' page (http://yann.lecun.com/exdb/mnist/) |
-| Pima Indians Diabetes (NIDDK) | `diabetes` | Not downloaded by the notebook; the user supplies `diabetes.csv` | UCI / Kaggle terms; **to be confirmed** |
+| Pima Indians Diabetes (NIDDK) | `diabetes` | Not downloaded by the notebook; the user supplies `diabetes.csv` | UCI / Kaggle terms |
 | Titanic: Machine Learning from Disaster | `titanic-tutorial` | Kaggle competition data (login required) | Kaggle competition rules |
 | Natural Language Processing with Disaster Tweets | `Natural_Language_Processing_with_Disaster_Tweets` | Kaggle competition data (login required) | Kaggle competition rules. Example tweets in the committed outputs come from that data |
-| `world_alcohol.csv` (WHO alcohol consumption data) | `world_alcohol_pandas_revision` | Not in the repository | Source **to be confirmed** |
-| `tip-amount.xlsx` | `tip_amount_tensorflow` | Not in the repository | Source **unknown**; **to be confirmed** before anyone is told it can be redistributed |
+| `world_alcohol.csv` (WHO alcohol consumption data) | `world_alcohol_pandas_revision` | Not in the repository | Source not recorded |
+| `tip-amount.xlsx` | `tip_amount_tensorflow` | Not in the repository | Source not recorded |
 | Synthetic data (`make_blobs`, toy points) | `plot_kmeans_silhouette_analysis`, `SigmoidNeuron` | Generated in the notebook | n/a |
 
 ## Libraries
