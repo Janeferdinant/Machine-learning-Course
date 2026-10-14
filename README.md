@@ -6,6 +6,8 @@
 
 Thirteen Jupyter notebooks that walk through classic machine-learning topics: random forests and decision trees, regression on the California housing data, neural networks in TensorFlow and PyTorch, a CNN on MNIST, k-means with silhouette analysis, text classification and pandas basics. Most notebooks keep the outputs they produced, so students can read them without running anything. Six were re-run on 2026-10-13 and 2026-10-14 (four of them fixed to download their own data), including the CNN on MNIST.
 
+These notebooks are used in the machine learning lab sessions I teach.
+
 ## Demo
 
 No hosted demo. Open any notebook in Google Colab with the badges in the [Notebooks table](#notebooks).
