@@ -115,7 +115,7 @@ Fraud and forgery detection (banknotes), property price estimation (California h
 - `mnist_opencv` is named after OpenCV but does not use it.
 - The versions in `requirements.txt` were tested locally, not in Colab. Colab ships newer TensorFlow, Keras and NumPy, so a notebook may behave differently there.
 - `finance.py` contains `!pip install` lines, so it cannot run as a Python file; it is left as uploaded.
-- The sources of `tip-amount.xlsx` and `world_alcohol.csv` are not confirmed, so those two notebooks may not be redistributable.
+- The notebooks that use `tip-amount.xlsx` and `world_alcohol.csv` expect you to supply those two files; they are not included in this repository.
 
 ## Future scope
 
