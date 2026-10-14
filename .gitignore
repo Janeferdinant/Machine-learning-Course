@@ -4,3 +4,5 @@ data/
 __pycache__/
 .venv/
 run-output/
+mymodel.pt
+my_submission.csv
