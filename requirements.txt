@@ -1,7 +1,10 @@
-# Versions used to re-run banknote_randomforest, california_regression, mnist_opencv, CNN_Identify_the_Digits_(MNIST), SigmoidNeuron and
-# plot_kmeans_silhouette_analysis on 2026-10-13 and 2026-10-14 (Python 3.11.9, Windows 11, CPU only).
-# TensorFlow 2.15 supports Python 3.9 to 3.11. The other notebooks were not re-run, so their
-# extra imports (PyTorch, gensim, pydotplus, ann_visualizer, ...) are deliberately not pinned here.
+# requirements
+
+# Versions used to re-run all thirteen notebooks (Python 3.11.9, Windows 11, CPU only).
+# The first six were re-run on 2026-10-13 and 2026-10-14; the remaining seven on 2026-10-15
+# (ANN_using_pytorch, ANN_using_tensorflow, Natural_Language_Processing_with_Disaster_Tweets,
+# diabetes, tip_amount_tensorflow, titanic-tutorial, world_alcohol_pandas_revision).
+# TensorFlow 2.15 supports Python 3.9 to 3.11.
 tensorflow==2.15.1
 keras==2.15.0
 numpy==1.26.4
@@ -18,3 +21,11 @@ nbclient==0.10.0
 nbformat==5.11.1
 # SigmoidNeuron progress bar
 tqdm==4.70.1
+# ANN_using_pytorch: CPU build of PyTorch (the extra index gives the CPU-only wheel on Linux;
+# on Windows and macOS the PyPI wheel is already CPU-only)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1
+# Natural_Language_Processing_with_Disaster_Tweets (gensim 4 API)
+gensim==4.3.3
+nltk==3.9.1
+scipy==1.13.1
