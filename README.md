@@ -1,6 +1,6 @@
 # Machine Learning Course Notebooks: teaching notebooks from linear regression to CNNs
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](#notebooks)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](#notebooks)
 
 ## Overview
 
@@ -95,7 +95,7 @@ requirements.txt           Package versions used for the 2026-10-13 re-runs
 docs/runs/                 Logs of the re-runs
 finance.py                 A Colab export of a Streamlit stock demo; not valid Python (see Limitations)
 THIRD_PARTY_NOTICES.md     Dataset and code credits and licenses
-LICENSE                    CC BY-NC-SA 4.0
+LICENSE                    CC BY-NC-ND 4.0
 data/                      Created by the notebooks; git-ignored
 ```
 
@@ -126,7 +126,7 @@ Fix and re-run the remaining notebooks, set random seeds, add a Colab smoke test
 
 ## License
 
-Original work © Jane Rose Ferdinant, licensed CC BY-NC-SA 4.0. Third-party components retain their own licenses; see THIRD_PARTY_NOTICES.md.
+Original work © Jane Rose Ferdinant, licensed CC BY-NC-ND 4.0. Third-party components retain their own licenses; see THIRD_PARTY_NOTICES.md.
 
 ## Author
 

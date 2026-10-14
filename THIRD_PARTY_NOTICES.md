@@ -1,6 +1,6 @@
 # Third-party notices
 
-Original work in this repository is © Jane Rose Ferdinant, licensed CC BY-NC-SA 4.0 (see `LICENSE`). The material below is not covered by that license and keeps its own terms. Where a notebook is described as "based on" or "adapted from" a source, that is judged from the notebook's own text (titles, function names, comments); items marked **to be confirmed** are inferences the owner should check.
+Original work in this repository is © Jane Rose Ferdinant, licensed CC BY-NC-ND 4.0 (see `LICENSE`). The material below is not covered by that license and keeps its own terms. Where a notebook is described as "based on" or "adapted from" a source, that is judged from the notebook's own text (titles, function names, comments); items marked **to be confirmed** are inferences the owner should check.
 
 ## Origin of the repository
 
