@@ -86,4 +86,16 @@ Seven notebooks could not be re-run in the earlier sessions because they needed 
 
 ## Result of the run
 
-All seven notebooks ran top to bottom with exit code 0 and 0 error outputs; their executed outputs are stored in the notebooks. Code cells with output / code cells: PyTorch ANN 14/23, TensorFlow ANN 61/78, NLP 39/52, diabetes 10/19, tip 9/13, titanic 33/45, world alcohol 31/32 (the rest are empty cells or cells that print nothing). No stored output contains a local path (checked by searching the notebooks for the user name, `AppData`, `portfolio-audit` and drive-letter paths).
+All seven notebooks ran top to bottom with exit code 0 and 0 error outputs; their executed outputs are stored in the notebooks. Code cells with output / code cells: PyTorch ANN 14/23, TensorFlow ANN 61/78, NLP 39/52, diabetes 10/19, tip 9/13, titanic 33/45, world alcohol 31/32 (the rest are empty cells or cells that print nothing). No stored output contains a local path (checked by searching the notebooks for the user name, the temp folder name and drive-letter paths).
+
+## Fresh-clone check (README commands)
+
+A fresh clone of the pull-request branch and a new virtual environment (Python 3.11.9) were used, with the Getting started commands from the README (the venv python was called directly instead of activating the venv):
+
+| Step | Result |
+|---|---|
+| `pip install -r requirements.txt` | exit 0, 375 s (TensorFlow, PyTorch CPU wheel and the other pins); `pip check`: no broken requirements |
+| `python -m jupyter nbconvert --to notebook --execute --output-dir run-output banknote_randomforest.ipynb` | exit 0, 29 s, 0 error outputs; the accuracy cell prints `0.9912536443148688`, as the README says |
+| Spot check: the same command for `ANN_using_pytorch.ipynb` | exit 0, 29 s, 0 error outputs; test confusion matrix [[191, 0], [0, 152]] |
+| Spot check: the same command for `Natural_Language_Processing_with_Disaster_Tweets.ipynb` | exit 0, 16 s, 0 error outputs; validation accuracy 0.9425837320574163 (all data downloaded from scratch) |
+
