@@ -71,6 +71,10 @@ Numbers come from the re-runs on 2026-10-13 (log: [docs/runs/2026-10-13-notebook
 | MNIST, CNN (2 conv + dense), 5 epochs at batch size 10, full 60,000 training images | test accuracy 0.9905 (0.9904999732971191), test loss 0.0297 | Verified (re-run 2026-10-14, full settings, CPU) | `CNN_Identify_the_Digits_(MNIST).ipynb`, 10,000 MNIST test images (also used as the validation set; no tuning was done on it). Log: [docs/runs/2026-10-14-cnn-mnist.md](docs/runs/2026-10-14-cnn-mnist.md) | 2026-10-14 |
 | Metrics printed in the other notebooks | as stored in each notebook | Not re-run (see the Notebooks table for reasons) | Notebook outputs | before 2026-10-13 |
 
+### CNN on MNIST with a separate validation split
+
+`CNN_Identify_the_Digits_(MNIST)` above passes the test images to `model.fit` as validation data. The companion notebook [`CNN_Identify_the_Digits_(MNIST)_validation_split.ipynb`](CNN_Identify_the_Digits_(MNIST)_validation_split.ipynb) trains the same network (batch size 10, 5 epochs) on the first 50,000 training images, uses the last 10,000 training images as validation data, fixes the random seeds, and evaluates the test set once at the end. Over seeds 0, 1 and 2 the test accuracy was 0.9907, 0.9890 and 0.9887 (mean 0.9895): **Verified (re-run 2026-10-14, seeds 0, 1, 2, validation split = last 10,000 of the 60,000 training images)**. The difference from 0.9905 is about 0.1 percentage points, the same size as the spread between seeds, so these runs show no large inflation but cannot settle a small one; the new runs also use 50,000 rather than 60,000 training images. Details, per-epoch numbers and what the split changes: [docs/runs/2026-10-14-mnist-validation-split.md](docs/runs/2026-10-14-mnist-validation-split.md). The three seeds were run with [`scripts/mnist_validation_split.py`](scripts/mnist_validation_split.py) (`python scripts/mnist_validation_split.py --seed 0 --out seed0.json`, about 6 minutes each on an 8-core CPU).
+
 ## Tech stack
 
 Python 3.11, Jupyter, TensorFlow 2.15.1 with Keras 2.15.0, scikit-learn 1.5.2, NumPy 1.26.4, pandas 2.2.3, matplotlib 3.9.2, seaborn 0.13.2. `ANN_using_pytorch.ipynb` also uses PyTorch, which is not pinned because that notebook was not re-run.
@@ -93,9 +97,10 @@ Expected: the last command writes `run-output/banknote_randomforest.ipynb` in we
 ## Project structure
 
 ```
-*.ipynb                    The 13 notebooks
+*.ipynb                    The 13 course notebooks plus the validation-split companion of the MNIST CNN
 requirements.txt           Package versions used for the 2026-10-13 re-runs
 docs/runs/                 Logs of the re-runs
+scripts/                   mnist_validation_split.py: the seeded validation-split run (three seeds)
 finance.py                 A Colab export of a Streamlit stock demo; not valid Python (see Limitations)
 THIRD_PARTY_NOTICES.md     Dataset and code credits and licenses
 LICENSE                    CC BY-NC-ND 4.0
