@@ -1,5 +1,5 @@
-# Versions used to re-run banknote_randomforest, california_regression, mnist_opencv and
-# plot_kmeans_silhouette_analysis on 2026-10-13 (Python 3.11.9, Windows 11, CPU only).
+# Versions used to re-run banknote_randomforest, california_regression, mnist_opencv, CNN_Identify_the_Digits_(MNIST), SigmoidNeuron and
+# plot_kmeans_silhouette_analysis on 2026-10-13 and 2026-10-14 (Python 3.11.9, Windows 11, CPU only).
 # TensorFlow 2.15 supports Python 3.9 to 3.11. The other notebooks were not re-run, so their
 # extra imports (PyTorch, gensim, pydotplus, ann_visualizer, ...) are deliberately not pinned here.
 tensorflow==2.15.1
@@ -16,3 +16,5 @@ ipykernel==6.29.5
 nbconvert==7.16.4
 nbclient==0.10.0
 nbformat==5.11.1
+# SigmoidNeuron progress bar
+tqdm==4.70.1
