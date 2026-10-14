@@ -1,6 +1,6 @@
 # Third-party notices
 
-Original work in this repository is © Jane Rose Ferdinant, licensed CC BY-NC-ND 4.0 (see `LICENSE`). The material below is not covered by that license and keeps its own terms. Where a notebook is described as "based on" or "adapted from" a source, that is judged from the notebook's own text (titles, function names, comments); items marked **to be confirmed** are inferences the owner should check.
+Original work in this repository is © Jane Rose Ferdinant, licensed CC BY-NC-ND 4.0 (see `LICENSE`). The material below is not covered by that license and keeps its own terms. Where a notebook is described as "based on" or "adapted from" a source, that is judged from the notebook's own text (titles, function names, comments).
 
 ## Origin of the repository
 
@@ -12,7 +12,7 @@ This repository was created on GitHub on 2020-08-23 from the GitHub Learning Lab
 |---|---|---|---|
 | `plot_kmeans_silhouette_analysis.ipynb` | scikit-learn example "Selecting the number of clusters with silhouette analysis on KMeans clustering" | https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html | BSD-3-Clause (text below) |
 | `california_regression.ipynb`, `tip_amount_tensorflow.ipynb` | Google Machine Learning Crash Course programming exercise "Linear regression with a real dataset" (`build_model`, `train_model`, `plot_the_model` and their docstrings), extended by the owner | https://developers.google.com/machine-learning/crash-course | Apache-2.0 (text below). Google states this license on the exercise notebooks; to be re-checked against the current course pages |
-| `titanic-tutorial.ipynb` | Kaggle notebook boilerplate and a feature-engineering workflow that resembles the public Kaggle notebook "Titanic Data Science Solutions" | https://www.kaggle.com/competitions/titanic | **to be confirmed.** Kaggle competition rules and the notebook author's license apply |
+| `titanic-tutorial.ipynb` | Kaggle notebook boilerplate and a feature-engineering workflow that resembles the public Kaggle notebook "Titanic Data Science Solutions" | https://www.kaggle.com/competitions/titanic | Kaggle competition rules and the notebook author's license apply |
 | `diabetes.ipynb` | A common decision-tree tutorial pattern (column names and `pydotplus` export) | not identified | not recorded |
 | `SigmoidNeuron.ipynb` | A deep-learning course notebook structure (sigmoid neuron class and toy-data fit) | not identified | not recorded |
 
