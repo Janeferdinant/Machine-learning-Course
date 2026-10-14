@@ -4,7 +4,7 @@
 
 ## Overview
 
-Thirteen Jupyter notebooks that walk through classic machine-learning topics: random forests and decision trees, regression on the California housing data, neural networks in TensorFlow and PyTorch, a CNN on MNIST, k-means with silhouette analysis, text classification and pandas basics. Most notebooks keep the outputs they produced, so students can read them without running anything. Four were re-run and fixed on 2026-10-13 and now download their own data.
+Thirteen Jupyter notebooks that walk through classic machine-learning topics: random forests and decision trees, regression on the California housing data, neural networks in TensorFlow and PyTorch, a CNN on MNIST, k-means with silhouette analysis, text classification and pandas basics. Most notebooks keep the outputs they produced, so students can read them without running anything. Six were re-run on 2026-10-13 and 2026-10-14 (four of them fixed to download their own data), including the CNN on MNIST.
 
 ## Demo
 
@@ -43,9 +43,9 @@ Other notebooks use Kaggle competition data (Titanic, Disaster Tweets), a Pima d
 |---|---|---|---|---|---|
 | `ANN_using_pytorch.ipynb` | Feed-forward neural network in PyTorch (banknote forgery detection) | Banknote Authentication (UCI), downloaded by the notebook | yes (14/23) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/ANN_using_pytorch.ipynb) | Not re-run (needs PyTorch, which is not in requirements.txt). Data cell updated |
 | `ANN_using_tensorflow.ipynb` | Neural network in TensorFlow/Keras, with a network diagram | Banknote Authentication (UCI), downloaded by the notebook | yes (52/78) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/ANN_using_tensorflow.ipynb) | Not re-run (needs ann_visualizer and graphviz; a later cell reuses stale variables). Data cell updated |
-| `CNN_Identify_the_Digits_(MNIST).ipynb` | CNN digit classifier | MNIST (Keras loader); also needs your own image 2.jpeg | yes (33/41), committed error | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/CNN_Identify_the_Digits_%28MNIST%29.ipynb) | Not re-run (about 30,000 CPU training steps, over the 20-minute limit; needs a personal image). Has a committed error |
+| `CNN_Identify_the_Digits_(MNIST).ipynb` | CNN digit classifier | MNIST (Keras loader); the optional personal-image cells (2.jpeg) are skipped when the file is missing | yes (35/41), no errors | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/CNN_Identify_the_Digits_%28MNIST%29.ipynb) | Verified (re-run 2026-10-14, full settings: batch size 10, 5 epochs, CPU, 12 min): test accuracy 0.9905. Three cells adjusted so it runs outside Colab |
 | `Natural_Language_Processing_with_Disaster_Tweets.ipynb` | Text preprocessing, word2vec and Naive Bayes on tweets | Kaggle "Disaster Tweets" competition data (login; not in repo) | yes (45/57) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/Natural_Language_Processing_with_Disaster_Tweets.ipynb) | Not re-run (Kaggle data; uses the gensim 3 API) |
-| `SigmoidNeuron.ipynb` | Sigmoid neuron from scratch | Synthetic, generated in the notebook | yes (13/26) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/SigmoidNeuron.ipynb) | Not re-run (self-contained; outputs as committed) |
+| `SigmoidNeuron.ipynb` | Sigmoid neuron from scratch | Synthetic, generated in the notebook | yes (13/26) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/SigmoidNeuron.ipynb) | Verified (re-run 2026-10-14, 56 s): runs clean after replacing `tqdm_notebook` with `tqdm` |
 | `banknote_randomforest.ipynb` | Random forest vs decision tree on banknote data | Banknote Authentication (UCI), downloaded by the notebook | yes (3/11) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/banknote_randomforest.ipynb) | Verified (re-run 2026-10-13, 35 s): runs clean. Data is downloaded in code |
 | `california_regression.ipynb` | Linear regression in TensorFlow, then a random forest | California housing (Google MLCC), downloaded by the notebook | yes (17/27) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/california_regression.ipynb) | Verified (re-run 2026-10-13, 5 min): runs clean after fixing a plot error on current NumPy |
 | `diabetes.ipynb` | Decision tree on diabetes data, graphviz export | Pima Indians Diabetes diabetes.csv (not in repo) | yes (10/19) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Janeferdinant/Machine-learning-Course/blob/master/diabetes.ipynb) | Not re-run (data not in repo; imports a module removed from scikit-learn) |
@@ -59,13 +59,14 @@ Status labels: **Verified (re-run date)** means the notebook was executed top to
 
 ## Results
 
-Numbers come from the re-runs on 2026-10-13 (log: [docs/runs/2026-10-13-notebook-reruns.md](docs/runs/2026-10-13-notebook-reruns.md)). None of the notebooks sets a random seed, so repeated runs differ slightly.
+Numbers come from the re-runs on 2026-10-13 (log: [docs/runs/2026-10-13-notebook-reruns.md](docs/runs/2026-10-13-notebook-reruns.md)) and 2026-10-14 (log: [docs/runs/2026-10-14-cnn-mnist.md](docs/runs/2026-10-14-cnn-mnist.md)). None of the notebooks sets a random seed, so repeated runs differ slightly.
 
 | Metric | Value | Status | How measured | Date |
 |---|---|---|---|---|
 | Banknote, random forest accuracy | 0.99125 (0.9912536443148688) | Verified (re-run 2026-10-13) | `banknote_randomforest.ipynb`, 343 held-out rows, confusion matrix [[184, 3], [0, 156]] | 2026-10-13 |
 | California housing, random forest R² | 0.8094 (0.8094088629585355), MSE 2616.38 | Verified (re-run 2026-10-13) | `california_regression.ipynb`, as printed by the notebook | 2026-10-13 |
 | MNIST, small CNN, 1 epoch at batch size 1 | training accuracy 0.8985 | Verified (re-run 2026-10-13) | `mnist_opencv.ipynb`. Training accuracy, not a test score | 2026-10-13 |
+| MNIST, CNN (2 conv + dense), 5 epochs at batch size 10, full 60,000 training images | test accuracy 0.9905 (0.9904999732971191), test loss 0.0297 | Verified (re-run 2026-10-14, full settings, CPU) | `CNN_Identify_the_Digits_(MNIST).ipynb`, 10,000 MNIST test images (also used as the validation set; no tuning was done on it). Log: [docs/runs/2026-10-14-cnn-mnist.md](docs/runs/2026-10-14-cnn-mnist.md) | 2026-10-14 |
 | Metrics printed in the other notebooks | as stored in each notebook | Not re-run (see the Notebooks table for reasons) | Notebook outputs | before 2026-10-13 |
 
 ## Tech stack
@@ -105,10 +106,10 @@ Fraud and forgery detection (banknotes), property price estimation (California h
 
 ## Limitations
 
-- Only four notebooks were re-run. The rest keep their old outputs, and some will not run as they are: they need data that is not in the repository (Kaggle, a Pima diabetes file, `world_alcohol.csv`, `tip-amount.xlsx`) or older library versions (`diabetes` imports a module that no longer exists in scikit-learn; the NLP notebook uses the gensim 3 API).
-- `CNN_Identify_the_Digits_(MNIST)` was not re-run. It needs about 30,000 CPU training steps and cells that read a personal image (`2.jpeg`) that is not in the repository; its stored output contains an error.
+- Six notebooks were re-run (four on 2026-10-13, `CNN_Identify_the_Digits_(MNIST)` and `SigmoidNeuron` on 2026-10-14). The rest keep their old outputs, and some will not run as they are: they need data that is not in the repository (Kaggle, a Pima diabetes file, `world_alcohol.csv`, `tip-amount.xlsx`) or older library versions (`diabetes` imports a module that no longer exists in scikit-learn; the NLP notebook uses the gensim 3 API).
+- `CNN_Identify_the_Digits_(MNIST)` was re-run on 2026-10-14 with its original training settings (30,000 training steps, about 10 minutes of training on an 8-core CPU). The network diagram cell needs Graphviz and prints a note without it, and the personal-image cells (`2.jpeg`) are skipped because that file is not in the repository.
 - `tip_amount_tensorflow` has a stored error (it uses variables that are never defined). `ANN_using_tensorflow` has a later cell that reuses the wrong predictions.
-- Results vary between runs because no seeds are set. Training accuracy in the MNIST notebook is not a test score.
+- Results vary between runs because no seeds are set. The `mnist_opencv` accuracy of 0.8985 is a training accuracy, not a test score; the CNN notebook's 0.9905 is measured on the 10,000 test images.
 - `mnist_opencv` is named after OpenCV but does not use it.
 - The versions in `requirements.txt` were tested locally, not in Colab. Colab ships newer TensorFlow, Keras and NumPy, so a notebook may behave differently there.
 - `finance.py` contains `!pip install` lines, so it cannot run as a Python file; it is left as uploaded.
